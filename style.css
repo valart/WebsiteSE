@@ -2,29 +2,36 @@ body{
 	padding: 0;
 	margin: 0;
 	
-	background: url(images/background.jpg) no-repeat center top / cover;
+	background: url(images/background1.jpeg) no-repeat center top / cover;
 	height: 100vh;
 }	
 
+.Container{
+	width: 990px;
+	margin: 0 auto;
+}
+
 
 .MainBlock{
-	padding-top: 150px;
+	padding-top: 50px;
 	text-align: center;
 }
 
 .MainBlock h1{
 	font-size: 60px;
-	color:white;
+	color: #06193d;
+	font-family:Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
 }
 
 .NamesButton{
-	padding-top: 150px;
+	padding-top: 230px;
 }
 
 .ArtjomButton{
-	background: #fed136;
-	color: #484543;
-	border-radius: 3px;
+	background: #06193d;
+	color: white;
+	border-radius: 30px;
 	display: block;
 	width: 240px;
 	padding: 20px 0;
@@ -34,14 +41,14 @@ body{
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 18px;
-	margin-left: 70px;
+	margin-left: 170px;
 	float:left;
 }
 
 .KristoButton{
-	background: #fed136;
-	color: #484543;
-	border-radius: 3px;
+	background: #06193d;
+	color: white;
+	border-radius: 30px;
 	display: block;
 	width: 240px;
 	padding: 20px 0;
@@ -51,15 +58,8 @@ body{
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 18px;
-	margin-right: 70px;
+	margin-right: 170px;
 	float:right;
-}
-
-.NimedeKirjeldus{
-	float:center;
-	color: white;
-	font-size: 21px;
-	font-family: "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 630px) {
