@@ -206,3 +206,34 @@ img{
 	padding-left: 355px;
 	font-size: 18px;
 }
+
+.Sports .SportText{
+	float: left;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+.Sports .Sport{
+	float: center;
+	padding-top:2px;
+	padding-left: 135px;
+	font-size: 18px;
+	font-weight:bold;
+}
+.Sports .Competition{
+	float: right;
+	font-size: 18px;
+}
+
+.Sports .newCompetition{
+	float: right;
+	font-size: 18px;
+	margin-left:-520px;
+}
+.Sports .newSport{
+	float: center;
+	padding-top:2px;
+	padding-left: 355px;
+	font-size: 18px;
+	font-weight:bold;
+}
