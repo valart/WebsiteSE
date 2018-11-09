@@ -28,7 +28,7 @@ hr{
 	border: 1px solid black;
 }
 
-img{
+.AvatarImage{
 	margin-top: 21px;
 	margin-left: 400px;
 	border-radius: 50%;
@@ -236,4 +236,20 @@ img{
 	padding-left: 355px;
 	font-size: 18px;
 	font-weight:bold;
+}
+
+.SocialButtons{
+	float:right;
+	margin-bottom: 5px;
+}
+.InstagramImage{
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+.FacebookImage{
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right:7px;
 }
