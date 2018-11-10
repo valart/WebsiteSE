@@ -44,76 +44,45 @@ hr{
 }
 .Profile .Text{
 	float: left;
-	padding-top:2px;
 	padding-left: 266px;
 	font-size: 18px;
 }
 .Profile .TextExpl{
 	float: right;
-	padding-top:1px;
 	padding-left: 270px;
 	font-size: 18px;
 }
 .Profile .newText{
 	float: left;
-	padding-top:2px;
 	padding-left: 355px;
 	font-size: 18px;
 }
 
 
-.Education{
-	padding-top: 30px;
-	margin-top: -25px;
-}
+
 .Education .EducationText{
 	float: left;
+	padding-top:2px;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
 }
-.Education .TÜ{
-	float: left;
-	padding-top:2px;
-	padding-left: 235px;
-	font-size: 18px;
+.Education .InstitutionYear{
+	float:right;
+	font-size:18px;
 }
-.Education .TÜYear{
-	float: right;
-	padding-top:2px;
-	padding-left: 270px;
-	font-size: 18px;
+.Education .Institution{
+	float:center;
+	font-size:18px;
+	margin-left:233px;
 }
-.Education .Nõo{
-	float: left;
-	padding-left: 357px;
-	font-size: 18px;
+.Education .newInstitution{
+	float:center;
+	font-size:18px;
+	margin-left:354px;
 }
-.Education .NõoYear{
-	float: right;
-	padding-left: 270px;
-	font-size: 18px;
-}
-.Education .JG{
-	float: left;
-	padding-left: 357px;
-	font-size: 18px;
-}
-.Education .JGYear{
-	float: right;
-	padding-left: 270px;
-	font-size: 18px;
-}
-.Education .KJ{
-	float: left;
-	padding-left: 357px;
-	font-size: 18px;
-}
-.Education .KJYear{
-	float: right;
-	padding-left: 20px;
-	font-size: 18px;
-}
+
+
 
 
 .Language .LanguageText{
@@ -122,38 +91,22 @@ hr{
 	font-size: 20px;
 	font-weight: bold;
 }
-.Language .Rus{
-	float: left;
-	padding-top:2px;
-	padding-left: 230px;
-	font-size: 18px;
-}
-.Language .RusDesc{
+.Language .LanguageDesc{
 	float: right;
-	padding-top:2px;
-	padding-left: 270px;
-	font-size: 18px;
+	height:18px;
 }
-.Language .Est{
-	float: left;
-	padding-left: 357px;
-	font-size: 18px;
+.Language .LanguageName{
+	float:center;
+	font-size:18px;
+	margin-left:228px;
 }
-.Language .EstDesc{
-	float: right;
-	padding-left: 270px;
-	font-size: 18px;
+.Language .lastLanguageName{
+	margin-left: 355px;
+	font-size: 	18px;
 }
-.Language .Eng{
-	float: left;
-	padding-left: 357px;
-	font-size: 18px;
-}
-.Language .EngDesc{
-	float: right;
-	padding-left: 260px;
-	font-size: 18px;
-}
+
+
+
 
 .Skill .SkillText{
 	float: left;
@@ -167,6 +120,9 @@ hr{
 	padding-left: 283px;
 	font-size: 18px;
 }
+
+
+
 
 .WorkExperience .WorkText{
 	float: left;
@@ -207,6 +163,9 @@ hr{
 	font-size: 18px;
 }
 
+
+
+
 .Sports .SportText{
 	float: left;
 	text-transform: uppercase;
@@ -237,6 +196,9 @@ hr{
 	font-size: 18px;
 	font-weight:bold;
 }
+
+
+
 
 .SocialButtons{
 	float:right;
