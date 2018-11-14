@@ -55,6 +55,7 @@ body{
 	padding: 20px 0;
 	font-weight: bold;
 	margin-left: 120px;
+	transition: 0.8s;
 }
 
 .KristoButton{
