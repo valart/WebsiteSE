@@ -36,166 +36,52 @@ hr{
 	height: 180px;
 }
 
-.Profile .ProfileText{
+
+
+
+
+.Name{
 	float: left;
+	width: 300px;
+}
+
+.Name a{
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
 }
-.Profile .Text{
-	float: left;
-	padding-left: 266px;
-	font-size: 18px;
-}
-.Profile .TextExpl{
-	float: right;
-	padding-left: 270px;
-	font-size: 18px;
-}
-.Profile .newText{
-	float: left;
-	padding-left: 355px;
-	font-size: 18px;
-}
 
-
-
-.Education .EducationText{
-	float: left;
-	padding-top:2px;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: bold;
-}
-.Education .InstitutionYear{
+.Description{
 	float:right;
-	font-size:18px;
+	width: 570px;
 }
-.Education .Institution{
-	float:center;
-	font-size:18px;
-	margin-left:233px;
-}
-.Education .newInstitution{
-	float:center;
-	font-size:18px;
-	margin-left:354px;
+.DescriptionName{
+	text-align:left;
+	float:left;
 }
 
-
-
-
-.Language .LanguageText{
-	float: left;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: bold;
-}
-.Language .LanguageDesc{
-	float: right;
-	height:18px;
-}
-.Language .LanguageName{
-	float:center;
-	font-size:18px;
-	margin-left:228px;
-}
-.Language .lastLanguageName{
-	margin-left: 355px;
-	font-size: 	18px;
-}
-
-
-
-
-.Skill .SkillText{
-	float: left;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: bold;
-}
-.Skill .Computer{
-	float: center;
-	padding-top:2px;
-	padding-left: 283px;
-	font-size: 18px;
-}
-
-
-
-
-.WorkExperience .WorkText{
-	float: left;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: bold;
-}
-.WorkExperience .WorkName{
-	float: center;
-	padding-top:2px;
-	padding-left: 155px;
-	font-size: 18px;
-	font-weight:bold;
-}
-.WorkExperience .WorkYear{
-	float: right;
-	font-size: 18px;
-}
-.WorkExperience .WorkDesc{
-	float: left;
-	padding-top:2px;
-	padding-left: 155px;
-	font-size: 18px;
-}
-
-.WorkExperience .oldWorkName{
-	float: center;
-	padding-top:2px;
-	padding-left: 355px;
-	font-size: 18px;
+.DescriptionNameBold{
+	text-align:left;
+	float:left;
 	font-weight:bold;
 }
 
-.WorkExperience .oldWorkDesc{
-	float: left;
-	padding-top:2px;
-	padding-left: 355px;
+.Description a{
 	font-size: 18px;
+}
+
+.DescriptionText{
+	text-align:right;
+	float:right;
+}
+
+.NewBlock1{
+	margin-bottom:-9px;
 }
 
 
 
 
-.Sports .SportText{
-	float: left;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: bold;
-}
-.Sports .Sport{
-	float: center;
-	padding-top:2px;
-	padding-left: 135px;
-	font-size: 18px;
-	font-weight:bold;
-}
-.Sports .Competition{
-	float: right;
-	font-size: 18px;
-}
-
-.Sports .newCompetition{
-	float: right;
-	font-size: 18px;
-	margin-left:-520px;
-}
-.Sports .newSport{
-	float: center;
-	padding-top:2px;
-	padding-left: 355px;
-	font-size: 18px;
-	font-weight:bold;
-}
 
 
 

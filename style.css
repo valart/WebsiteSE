@@ -28,61 +28,55 @@ body{
 	padding-top: 230px;
 }
 
-.HermanButton{
+.createButton{
 	background: #06193d;
 	color: white;
 	border-radius: 30px;
-	float:left;
-	width: 220px;
-	font-size: 18px;
-	text-transform: uppercase;
-	text-align: center;
+	display: block;
+	width: 240px;
 	padding: 20px 0;
-	font-weight: bold;
-	margin-left: 50px;
-}
-
-.ArtjomButton{
-	background: #06193d;
-	color: white;
-	border-radius: 30px;
+	margin: 0 auto;
 	text-decoration: none;
-	float:left;
-	width: 220px;
-	font-size: 18px;
-	text-transform: uppercase;
 	text-align: center;
-	padding: 20px 0;
+	text-transform: uppercase;
 	font-weight: bold;
-	margin-left: 120px;
-	transition: 0.8s;
+	font-size: 18px;
+	margin-left: 170px;
+	float:left;
 }
 
-.KristoButton{
+.exampleButton{
+	transition-duration: 0.7s;
 	background: #06193d;
 	color: white;
 	border-radius: 30px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 170px;
 	float:right;
-	width: 220px;
-	font-size: 18px;
-	text-transform: uppercase;
-	text-align: center;
-	padding: 20px 0;
-	font-weight: bold;
-	margin-right: 50px;
 }
 
-.ArtjomButton:hover{
-	background: #092551;
+.exampleButton:hover{
+	transition-duration: 0.7s;
+	background: #082356;
 	color: white;
 	border-radius: 30px;
-	text-decoration: none;
-	float:left;
-	width: 220px;
-	font-size: 18px;
-	text-transform: uppercase;
-	text-align: center;
+	display: block;
+	width: 240px;
 	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
 	font-weight: bold;
-	margin-left: 120px;
+	font-size: 18px;
+	margin-right: 170px;
+	float:right;
 }
