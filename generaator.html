@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<script src="javascript.js"></script>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styleCV.css" />
+</head>
+<body>
+
+	
+
+	<div id="main" class="Container">
+	
+		<form>
+		Täisnimi:<br>
+		<input id="nimi" type="text" name="nimi"><br>
+		Email:<br>
+		<input id="email" type="text" name="email"><br>
+		</form>
+
+		<br>
+
+		<form>
+		Blocki nimi:<br>
+		<input id="blockiNimi" type="text" name="blockiNimi"><br>
+		Blocki sisu1:<br>
+		<input id="s1" type="text" name="s1"><br>
+		Blocki sisu2:<br>
+		<input id="s2" type="text" name="s2"><br>
+		Blocki sisu3:<br>
+		<input id="s3" type="text" name="s3"><br>
+		Blocki sisu11:<br>
+		<input id="s11" type="text" name="s11"><br>
+		Blocki sisu22:<br>
+		<input id="s22" type="text" name="s22"><br>
+		Blocki sisu33:<br>
+		<input id="s33" type="text" name="s33"><br>
+		</form>
+
+		<button type="button" onclick="GenerateHTML()" >Generate HTML</button>
+			
+		</div>
+
+	<div id="generated" class="Container" style="display:none">
+	
+		<p id="outText"></p>
+
+		<form>
+		Väljund:<br>
+		<input id="outCopy" type="text" name="out">
+		</form>
+			
+		</div>
+		
+</body>
+</html>
