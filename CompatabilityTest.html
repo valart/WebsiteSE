@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function loadset() {
+			presets = ["Date of birth", "Citizenship", "Telephone", "Contact address", "Place of birth"]
+			for (x in presets)  {
+				var row = document.createElement("tr");
+				var data1 = document.createElement("td");
+				var data2 = document.createElement("td");
+				var data3 = document.createElement("td");
+
+				var n = document.getElementById("t1").childElementCount;
+				var n1 = n + 1;
+				
+				row.setAttribute("id", "t1r" + n1);
+				data1.setAttribute("id", "t1r" + n1 + "c1");
+				data2.setAttribute("id", "t1r" + n1 + "c2");
+				data3.setAttribute("id", "t1r" + n1 + "c3");
+
+				var preset = document.createElement("input");
+				preset.setAttribute("value", presets[x])
+				data2.appendChild(preset);
+				
+				var IDinput = document.createElement("input")
+				IDinput.setAttribute("id", presets[x])
+				data3.appendChild(IDinput);
+
+				row.appendChild(data1);
+				row.appendChild(data2);
+				row.appendChild(data3);
+
+				var element = document.getElementById("t1");
+				element.appendChild(row);
+			}
+		}
+	</script>
+</head>
+
+<body onload="loadset()">
+	<form>
+
+		Name: <input type="txt" id="Name">
+		Secondname: <input type="txt" id="Secondname">
+		E-post: <input type="txt" id="Epost">
+
+		<table id="t1">
+				<tr id="t1r0">
+				<th id="t1r0c1">Profile</th>
+				<th id="t1r0c2"></th>
+				<th id="t1r0c3"></th>
+			</tr>
+		</table>
+		<table>
+			<tr id=b1>
+				<td><button onclick="add(1)" type="button">+</button></td>
+				<td><button onclick="remove(1)" type="button">-</button></td>
+			</tr>
+		</table>
+
+		<table id="t2">
+				<tr id="t2r0">
+				<th id="t2r0c1">Education</th>
+				<th id="t2r0c2"></th>
+				<th id="t2r0c3"></th>
+			</tr>
+		</table>
+		<table>
+			<tr id=b2>
+				<td><button onclick="add(2)" type="button">+</button></td>
+				<td><button onclick="remove(2)" type="button">-</button></td>
+			</tr>
+		</table>
+
+		<table id="t3">
+				<tr id="t3r0">
+				<th id="t3r0c1">Languages</th>
+				<th id="t3r0c2"></th>
+				<th id="t3r0c3"></th>
+			</tr>
+		</table>
+		<table>
+			<tr id=b3>
+				<td><button onclick="add(3)" type="button">+</button></td>
+				<td><button onclick="remove(3)" type="button">-</button></td>
+			</tr>
+		</table>
+
+		<table id="t4">
+				<tr id="t4r0">
+				<th id="t4r0c1">Skills</th>
+				<th id="t4r0c2"></th>
+				<th id="t4r0c3"></th>
+			</tr>
+		</table>
+		<table>
+			<tr id=b2>
+				<td><button onclick="add(4)" type="button">+</button></td>
+				<td><button onclick="remove(4)" type="button">-</button></td>
+			</tr>
+		</table>
+
+		<table id="t5">
+				<tr id="t5r0">
+				<th id="t5r0c1">Work Experience</th>
+				<th id="t5r0c2"></th>
+				<th id="t5r0c3"></th>
+			</tr>
+		</table>
+		<table>
+			<tr id=b5>
+				<td><button onclick="add(5)" type="button">+</button></td>
+				<td><button onclick="remove(5)" type="button">-</button></td>
+			</tr>
+		</table>
+
+		<table id="t6">
+				<tr id="t6r0">
+				<th id="t6r0c1">Achivements</th>
+				<th id="t6r0c2"></th>
+				<th id="t6r0c3"></th>
+			</tr>
+		</table>
+		<table>
+			<tr id=b6>
+				<td><button onclick="add(6)" type="button">+</button></td>
+				<td><button onclick="remove(6)" type="button">-</button></td>
+			</tr>
+		</table>
+	<form/>
+
+	<button onclick="Generate()", type="button">GENERATE</button>
+
+	<script>
+		function add(tbl) {
+			var row = document.createElement("tr");
+			var data1 = document.createElement("td");
+			var data2 = document.createElement("td");
+			var data3 = document.createElement("td");
+
+			var n = document.getElementById("t" + tbl).childElementCount;
+			var n1 = n + 1;
+			row.setAttribute("id", "t" + tbl + "r" + n1);
+			data1.setAttribute("id", "t1r" + n1 + "c1");
+			data2.setAttribute("id", "t1r" + n1 + "c2");
+			data3.setAttribute("id", "t1r" + n1 + "c3");
+
+			data2.appendChild(document.createElement("input"));
+			data3.appendChild(document.createElement("input"));
+
+			row.appendChild(data1);
+			row.appendChild(data2);
+			row.appendChild(data3);
+
+			var element = document.getElementById("t" + tbl);
+			element.appendChild(row);
+		}
+		
+		function remove(tbl) {
+			var n = document.getElementById("t" + tbl).childElementCount;
+			if (n != 1)  {
+				var parent = document.getElementById("t" + tbl);
+				var child = document.getElementById("t" + tbl + "r" + n);
+				parent.removeChild(child);
+			}
+		}
+
+		function Generate() {
+			var name = document.getElementById("Name").value;
+			var secondname = document.getElementById("Secondname").value;
+			var epost = document.getElementById("Epost").value;
+			
+			//PROFILE
+			var dateofbirth = document.getElementById("Date of birth").value;
+			var citizenship = document.getElementById("Citizenship").value;
+			var telephonenumber = document.getElementById("Telephone").value;
+			var contactaddress = document.getElementById("Contact address").value;
+			var placeofbirth = document.getElementById("Place of birth").value;
+			
+			var code = '<!DOCTYPE html> \
+			<html> \
+			<head> \
+				<meta charset="utf-8"> \
+				<link rel="stylesheet" href="styleCV.css" /> \
+			</head> \
+			<body> \
+				<div class="Container"> \
+					<div class="Header"> \
+						<a>Name<br>Secondname</a> \
+						<img src="images/Artjom.jpg" class="AvatarImage" alt="Artjom image"> \
+						<br> \
+						<p>Epost</p> \
+					</div> \
+					<hr> \
+					<div class="NewBlock"> \
+						<div class="Name"> \
+							<a>Profile</a> \
+						</div> \
+						<div class="Description"> \
+							<div class="DescriptionName"> \
+								<a>Date of birth</a> \
+							</div> \
+							<div class="DescriptionText"> \
+								<a>DateofbirthValue</a> \
+							</div> \
+						</div> \
+						<div class="Description"> \
+							<div class="DescriptionName"> \
+								<a>Сitizenship</a> \
+							</div> \
+							<div class="DescriptionText"> \
+								<a>CitizenshipValue</a>	\
+							</div> \
+						</div> \
+						<div class="Description"> \
+							<div class="DescriptionName"> \
+								<a>Telephone</a> \
+							</div> \
+							<div class="DescriptionText"> \
+								<a>TelephonenumberValue</a> \
+							</div> \
+						</div> \
+						<div class="Description"> \
+							<div class="DescriptionName"> \
+								<a>Contact address</a> \
+							</div> \
+							<div class="DescriptionText"> \
+								<a>ContactaddressValue</a> \
+							</div> \
+						</div> \
+						<div class="Description"> \
+							<div class="DescriptionName"> \
+								<a>Place of birth</a> \
+							</div> \
+							<div class="DescriptionText"> \
+								<a>PlaceofbirthValue</a> \
+							</div> \
+						</div> \
+					</div> \
+					<br style="clear: both;"> \
+					<hr> \
+				</div> \
+			</body> \
+			</html>';
+
+			var finish = code.replace("Name",name);
+			finish = finish.replace("Secondname",secondname);
+			finish = finish.replace("Epost",epost);
+			
+			finish = finish.replace("DateofbirthValue",dateofbirth);
+			finish = finish.replace("CitizenshipValue",citizenship);
+			finish = finish.replace("TelephonenumberValue",telephonenumber);
+			finish = finish.replace("ContactaddressValue",contactaddress);
+			finish = finish.replace("PlaceofbirthValue",placeofbirth);
+			
+			var mywindow = window.open('', 'PRINT', 'height=1000,width=910');
+			mywindow.document.write(finish);
+		   
+		    //document.getElementById("demo").innerHTML = finish1;
+		}
+	</script>
+</body>
+</html>
