@@ -1,0 +1,106 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #e6eaf4;
+}	
+
+.Container{
+	width: 910px;
+	margin: 0 auto;
+}
+
+.Header a{
+	float: left;
+	padding-top: 30px;
+	padding-left: 50px;
+	font-family: "Lucida Console", Times, serif;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+.Header p{
+	padding-top: 123px;
+	font-size: 20px;
+	padding-left: 60px;
+}
+
+.AvatarImage{
+	float:right;
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+}
+
+hr{
+	border: 1px solid black;
+}
+
+
+
+
+
+.Name{
+	float: left;
+	width: 300px;
+}
+
+.Name a{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.Description{
+	float:right;
+	width: 570px;
+}
+.DescriptionName{
+	text-align:left;
+	float:left;
+}
+
+.DescriptionNameBold{
+	text-align:left;
+	float:left;
+	font-weight:bold;
+}
+
+.Description a{
+	font-size: 18px;
+}
+
+.DescriptionText{
+	text-align:right;
+	float:right;
+}
+
+
+
+
+
+
+
+
+
+
+.SocialButtons{
+	float:right;
+	margin-bottom: 5px;
+}
+.instagramImage{
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+.facebookImage{
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right:7px;
+}
+.twitterImage{
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right:7px;
+}
