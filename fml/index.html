@@ -4,39 +4,13 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body onload="fml()">
-	<script>
-		function fml() {
-			var path = window.location.href;
-			path = path.toString();
-			path = path.slice(0, -11);
-			a1 = document.createElement("a");
-			a2 = document.createElement("a");
-
-			node1 = document.createTextNode("Make your own");
-			node2 = document.createTextNode("Example");
-
-			a1.appendChild(node1);
-			a2.appendChild(node2);
-
-			a1.setAttribute("class", "createButton");
-			a2.setAttribute("class", "exampleButton");
-
-			p1 = path + "/CVindex.html";
-			p2 = path + "/CV.html";
-
-			a1.setAttribute("href", p1)
-			a2.setAttribute("href", p2)
-
-			var element = document.getElementById("buttons");
-			element.appendChild(a1);
-			element.appendChild(a2);
-			}
-	</script>
+<body>
 	<div class="Container">
 		<div class="MainBlock">
-			<h1>University Project<br>CV</h1>
-			<div class="NamesButton" id="buttons">
+			<h1>University project<br>CV</h1>
+			<div class="NamesButton">
+				<a class="createButton" href="CVindex.html">Make your own</a>
+				<a class="exampleButton" href="CV.html">Example</a>
 			</div>
 		</div>
 	</div>
