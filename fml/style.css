@@ -2,7 +2,7 @@ body{
 	padding: 0;
 	margin: 0;
 	
-	background: url(images/background1.jpeg) no-repeat center top / cover;
+	background: url(images/background1.jpeg) no-repeat center top / cover; /*Pilt oli võetud siit https://www.pexels.com/photo/two-person-in-formal-attire-doing-shakehands-886465/*/
 	height: 100vh;
 }	
 
