@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CVindexStyle.css" />
+	<script>
+		function loadset() {
+			presets = ["Date of birth", "Citizenship", "Telephone", "Contact address", "Place of birth"]
+			for (x in presets)  {
+				var row = document.createElement("tr");
+				var data0 = document.createElement("td");
+				var data1 = document.createElement("td");
+				var data2 = document.createElement("td");
+				var n = document.getElementById("t1").childElementCount;
+				var n1 = n + 1;
+				
+				row.setAttribute("id", "t1r" + n1);
+				
+				var input1 = document.createElement("input");
+				var input2 = document.createElement("input");
+
+				input1.setAttribute("value", presets[x])
+				input1.setAttribute("id", "t1r" + n1 + "c1");
+				input2.setAttribute("id", "t1r" + n1 + "c2");
+				
+				data1.appendChild(input1);
+				data2.appendChild(input2);
+				row.appendChild(data0);
+				row.appendChild(data1);
+				row.appendChild(data2);
+				var element = document.getElementById("t1");
+				element.appendChild(row);
+			}
+		}
+	</script>
+</head>
+
+<body onload="loadset()">
+
+	<center><h1><p>CV GENERATOR</p></h1></center>
+
+	<div class="Container">
+		<form>
+
+			 <p>* = required</p>
+			 
+			 <label for="Name">Name* </label><input type="txt" id="Name" placeholder="Your name">
+			 <label for="Surename">Surename* </label><input type="txt" id="Sname" placeholder="Your surename">
+			 <label for="Email">Email* </label><input type="txt" id="email" placeholder="Your email">
+			 <hr>
+			 <label for="Picture">Choose a profile picture* (squared please):</label> <input type="file" id="file" multiple="false" accept="image/*" name="image" onchange="loadFile(event)">
+			 <br>
+			 <img id="output" class="AvatarImage" width="300">
+			 <hr>
+			<table id="t1">
+					<tr id="t1r0">
+					<th id="t1r0c1"><h1>PROFILE</h1></th>
+					<th id="t1r0c2"></th>
+					<th id="t1r0c3"></th>
+					</tr>
+			</table>
+			<table>
+				<tr id=b1>
+					<td><button onclick="add(1)" type="button">+</button></td>
+					<td><button onclick="remove(1)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t2">
+					<tr id="t2r0">
+					<th id="t2r0c1"><h1>EDUCATION</h1></th>
+					<th id="t2r0c2"></th>
+					<th id="t2r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b2>
+					<td><button onclick="add(2)" type="button">+</button></td>
+					<td><button onclick="remove(2)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t3">
+					<tr id="t3r0">
+					<th id="t3r0c1"><h1>LANGUAGES</h1></th>
+					<th id="t3r0c2"></th>
+					<th id="t3r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b3>
+					<td><button onclick="add(3)" type="button">+</button></td>
+					<td><button onclick="remove(3)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t4">
+					<tr id="t4r0">
+					<th id="t4r0c1"><h1>SKILLS</h1></th>
+					<th id="t4r0c2"></th>
+					<th id="t4r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b2>
+					<td><button onclick="add(4)" type="button">+</button></td>
+					<td><button onclick="remove(4)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t5">
+					<tr id="t5r0">
+					<th id="t5r0c1"><h1>WORK EXPERIENCE</h1></th>
+					<th id="t5r0c2"></th>
+					<th id="t5r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b5>
+					<td><button onclick="add(5)" type="button">+</button></td>
+					<td><button onclick="remove(5)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t6">
+					<tr id="t6r0">
+					<th id="t6r0c1"><h1>ACHIVEMENTS</h1></th>
+					<th id="t6r0c2"></th>
+					<th id="t6r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b6>
+					<td><button onclick="add(6)" type="button">+</button></td>
+					<td><button onclick="remove(6)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table>
+				<tr>
+					<th><Label>Social media</Label></th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label>Facebook:</label></td>
+					<td><input type="txt" id="facebook" placeholder="Your Facebook link"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label>Twitter:</label></td>
+					<td><input type="txt" id="twitter" placeholder="Your Twitter link"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label>Instagram:</label></td>
+					<td><input type="txt" id="instagram" placeholder="Your Instagram link"></td>
+				</tr>
+			</table>
+
+		<form/>
+		<hr>
+		<button type="button" class="generate" onclick="genHTML()">GENERATE MY CV</button>
+	</div>
+
+	<script>
+		var loadFile = function(event) {
+		var image = document.getElementById("output");
+		image.src = URL.createObjectURL(event.target.files[0]);
+		}
+
+		function add(tbl) {
+			var row = document.createElement("tr");
+			var data0 = document.createElement("td");
+			var data1 = document.createElement("td");
+			var data2 = document.createElement("td");
+			var n = document.getElementById("t" + tbl).childElementCount;
+			var n1 = n + 1;
+
+			row.setAttribute("id", "t" + tbl + "r" + n1);
+
+			var input1 = document.createElement("input");
+			var input2 = document.createElement("input");
+
+			input1.setAttribute("id", "t" + tbl + "r" + n1 + "c1");
+			input2.setAttribute("id", "t" + tbl + "r" + n1 + "c2");
+
+			data1.appendChild(input1);
+			data2.appendChild(input2);
+
+			row.appendChild(data0);
+			row.appendChild(data1);
+			row.appendChild(data2);
+
+			var element = document.getElementById("t" + tbl);
+			element.appendChild(row);
+		}
+		
+		function remove(tbl) {
+			var n = document.getElementById("t" + tbl).childElementCount;
+			if (n != 1)  {
+				var parent = document.getElementById("t" + tbl);
+				var child = document.getElementById("t" + tbl + "r" + n);
+				parent.removeChild(child);
+			}
+		}
+
+		function genHTML() {
+			var Name = document.getElementById("Name").value;
+			var Sname = document.getElementById("Sname").value;
+			var email = document.getElementById("email").value;
+
+			var code = '<!DOCTYPE html> \
+			<html> \
+			<head> \
+				<meta charset="utf-8"> \
+				<link rel="stylesheet" href="styleCV.css" /> \
+			</head> \
+			\
+			<body> \
+			<div class="Header"> \
+				<a>' + Name + '<br>' + Sname + '</a> \
+				<img src=' + document.getElementById("output").src + ' id="output" class="AvatarImage" alt="' + Name + ' image"> \
+				<br> \
+				<p>' + email + '</p> \
+			</div>\
+			\
+			<hr> \
+			'
+
+			var content = ["PROFILE", "EDUCATION", "LANGUAGES", "SKILLS", "WORK EXPERIENCE", "ACHIVEMENTS"]
+			for (tbl in content) {
+				t = content.indexOf(content[tbl]) + 1
+				n = document.getElementById("t" + t).childElementCount;
+				if (n > 1) {
+					code += '<div class="NewBlock"> \
+					<div class="Name"> \
+						<a>' + content[tbl] + '</a> \
+					</div> \
+					'
+
+					n1 = n+1
+					for (var x = 2; x < n1; x++ ) {
+						code += '<div class="Description"> \
+							<div class="DescriptionName"> \
+								<a>' + document.getElementById("t" + t + "r"+x+"c1").value + '</a> \
+							</div> \
+							<div class="DescriptionText"> \
+								<a>' + document.getElementById("t" + t + "r"+x+"c2").value + '</a> \
+							</div> \
+						</div> \
+						'
+					}
+					code += '<br style="clear: both;"><hr>'
+				}
+			}
+
+			code += '</div> \
+			<br style="clear: both;"> \
+			<hr> \
+			<div class="SocialButtons"> \
+			'
+			var social = ["instagram", "facebook", "twitter"]
+			for (s in social) {
+				if ((document.getElementById(social[s]).value).length != 0) {
+					code += '<a href="' + document.getElementById(social[s]).value + '"> \
+					<img src="images/' + social[s] + '.png" class="' + social[s] + 'Image" alt="' + social[s] + ' image"> \
+					</a> \
+					'
+				}		
+			}
+
+			code += '</div></div></body></html>'
+			var mywindow = window.open('', 'PRINT', 'height=1000,width=910');
+			mywindow.document.write(code);
+		}
+	</script>
+</body>
+
+</html>

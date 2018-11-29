@@ -1,0 +1,78 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #e3ebf7;
+}
+
+hr{
+	border: 1px solid black;
+}	
+
+.Container{
+	width: 910px;
+	padding-top: 50px;
+	margin: 0 auto;
+}
+
+#Name,#Secondname{
+	margin-right: 5px;
+}
+
+label{
+	font-family: "Times New Roman", Times, serif;
+	font-size:20px;
+}
+
+input{
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+	height:25px;
+	font-size: 15px;
+	outline: none;
+	padding-left: 9px;
+	width:210px;
+}
+
+input:focus {
+	color: #000000;
+	border: 1px solid #000000
+}
+
+button{
+	background-color: white;
+    color: black;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border: 1px solid black;
+	outline:none;
+}
+button:hover{
+	background-color:#ced4dd;
+	cursor:pointer;
+}
+
+.generate{
+	transition-duration: 0.7s;
+	background: #06193d;
+	color: white;
+	border-radius: 30px;
+	display: block;
+	width: 240px;
+	padding-top: 10px;
+	padding-bottom:10px;
+	height: 50px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 21px;
+}
+.generate:hover{
+	transition-duration: 0.7s;
+	background: #0a2b68;
+}
