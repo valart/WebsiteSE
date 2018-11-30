@@ -176,7 +176,7 @@ function genPDF() {
 
 			var img = canvas.toDataURL("image/png")
 			var doc = new jsPDF();
-			doc.addImage(img, "JPEG", 0, 0, 210, 250);
+			doc.addImage(img, "JPEG", 0, 0, 210, 210);
 			doc.save("MyCV.pdf");
 		}
 	});
