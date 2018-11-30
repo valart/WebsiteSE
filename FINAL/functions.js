@@ -80,17 +80,17 @@ function genHTML() {
 
 	var code = '<!DOCTYPE html> \n\
 	<html> \n\
-	<head id=pea> \n\
-		<button type="button" id="downloadButton" class="generate" onclick="genPDF()">DOWNLOAD MY CV</button> \n\
+	<head> \n\
 		<script type="text/javascript" src="functions.js"></script> \n\
 		<script type="text/javascript" src="js/jspdf.min.js"></script> \n\
 		<script type="text/javascript" src="js/html2canvas.js"></script> \n\
+		<script type="text/javascript" src="js/FileSaver.js"></script> \n\
 		<meta charset="utf-8"> \n\
 		<link rel="stylesheet" href="styleCV.css" /> \n\
 	</head> \n\
 	\n\
 	<body> \n\
-	<div class = "Container" id="PDF"> \n\
+	<div class = "Container"> \n\
 	<div class="Header"> \n\
 		<a>' + Name + '<br>' + Sname + '</a>\n\
 	'
@@ -147,8 +147,9 @@ function genHTML() {
 	}
 
 	code += '<br> \n\
-	</div>\n</div>\n</div> \n\
-	</body>\n</html> \n\
+	<button type="button" id="downloadPDF" class="generate" onclick="genPDF()">DOWNLOAD AS PDF</button><button type="button" id="downloadHTML" class="generate" onclick="download()">DOWNLOAD HTML</button> \n\
+	</div>\n\</div>\n\</div> \n\
+	</body>\n\</html> \n\
 	'
 
 	var mywindow = window.open('', 'PRINT', 'height=1000,width=910');
@@ -156,8 +157,12 @@ function genHTML() {
 }
 
 function genPDF() {
-	var parent = document.body;
-	var child = document.getElementById("downloadButton");
+	var parent = document.getElementById("SB");
+	var child = document.getElementById("downloadPDF");
+	parent.removeChild(child);
+
+	var parent = document.getElementById("SB");
+	var child = document.getElementById("downloadHTML");
 	parent.removeChild(child);
 
 	var social = ["instagram", "facebook", "twitter"]
@@ -180,4 +185,9 @@ function genPDF() {
 			doc.save("MyCV.pdf");
 		}
 	});
+}
+
+function download() {
+	var blob = new Blob([code], {type: "text/plain;charset=utf-8"});
+	saveAs(blob, "YourCV.html");
 }
