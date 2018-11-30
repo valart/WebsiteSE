@@ -189,18 +189,29 @@ function genPDF() {
 }
 
 function download() {
+
+	var parent = document.getElementById("SB");
+	var child = document.getElementById("downloadPDF");
+	parent.removeChild(child);
+
+	var parent = document.getElementById("SB");
+	var child = document.getElementById("downloadHTML");
+	parent.removeChild(child);
+
 	var y= '<html> \n\
-			<head> \n\
-		<meta charset="utf-8"> \n\
-		<link rel="stylesheet" href="styleCV.css" /> \n\
+	<head> \n\
+	<meta charset="utf-8"> \n\
+	<link rel="stylesheet" href="styleCV.css" /> \n\
 	</head> \n\
 	\n\
 	<body>\n\
 	';
+	
 	var x = document.body.innerHTML;
 	x += '</body>\n\
 	</html>\n\
 	';
+	
 	var html = new Blob([y+x], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
 	saveAs(html, "YourCV.html");
 	
@@ -276,7 +287,7 @@ function download() {
 				height: 30px;\n \
 				float: right;\n \
 			}\n \
-			.facebookImage{\n \
+			.facebookImage{\n\
 				width: 30px;\n \
 				height: 30px;\n \
 				float: right;\n \
@@ -290,4 +301,10 @@ function download() {
 			}';
 			var css = new Blob([codeCSS], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
 			saveAs(css, "styleCV.css");
+			
+			var tekst = "ENG:\ This HTML does not contain your images. To add you need to create a folder of images and add all the necessary pictures to it.\
+			EST:\ Antud HTML ei sisalda Teie listud pilte(profiili pilt, sotsiaalnupud). Selleks, et neid lisada, looge kaust nimega images ning lisage sinna kõik vajalikud pildid.";
+			var seletus = new Blob([tekst], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
+			saveAs(seletus, "explanation.txt");
+		
 }
