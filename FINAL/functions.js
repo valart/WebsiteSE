@@ -189,8 +189,19 @@ function genPDF() {
 }
 
 function download() {
+	var y= '<html> \n\
+			<head> \n\
+		<meta charset="utf-8"> \n\
+		<link rel="stylesheet" href="styleCV.css" /> \n\
+	</head> \n\
+	\n\
+	<body>\n\
+	';
 	var x = document.body.innerHTML;
-	var html = new Blob([x], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
+	x += '</body>\n\
+	</html>\n\
+	';
+	var html = new Blob([y+x], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
 	saveAs(html, "YourCV.html");
 	
 	var codeCSS = 'body{\n \
