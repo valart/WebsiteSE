@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styleCVindex.css" />
+	<script src="functions.js"></script>
+</head>
+
+<body onload="loadset()">
+	<center><h1><p>CV GENERATOR</p></h1></center>
+
+	<div class="Container">
+		<form>
+			<label for="Name">Name: </label><input type="txt" id="Name" placeholder="Your name">
+			<label for="Surename">Surename: </label><input type="txt" id="Sname" placeholder="Your surename">
+			<label for="Email">Email: </label><input type="txt" id="email" placeholder="Your email">
+			<hr>
+			<label for="Picture">Choose a profile picture* (squared please):</label> <input type="file" id="file" multiple="false" accept="image/*" name="image" onchange="loadFile(event)">
+			<br>
+			<img id="output" class="AvatarImage" width="300">
+
+			<hr>
+
+			<table id="t1">
+					<tr id="t1r0">
+						<th id="t1r0c1"><h1>PROFILE</h1></th>
+						<th id="t1r0c2"></th>
+						<th id="t1r0c3"></th>
+					</tr>
+			</table>
+			<table>
+				<tr id=b1>
+					<td><button onclick="add(1)" type="button">+</button></td>
+					<td><button onclick="remove(1)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t2">
+				<tr id="t2r0">
+					<th id="t2r0c1"><h1>EDUCATION</h1></th>
+					<th id="t2r0c2"></th>
+					<th id="t2r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b2>
+					<td><button onclick="add(2)" type="button">+</button></td>
+					<td><button onclick="remove(2)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t3">
+				<tr id="t3r0">
+					<th id="t3r0c1"><h1>LANGUAGES</h1></th>
+					<th id="t3r0c2"></th>
+					<th id="t3r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b3>
+					<td><button onclick="add(3)" type="button">+</button></td>
+					<td><button onclick="remove(3)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t4">
+				<tr id="t4r0">
+					<th id="t4r0c1"><h1>SKILLS</h1></th>
+					<th id="t4r0c2"></th>
+					<th id="t4r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b4>
+					<td><button onclick="add(4)" type="button">+</button></td>
+					<td><button onclick="remove(4)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t5">
+				<tr id="t5r0">
+					<th id="t5r0c1"><h1>WORK EXPERIENCE</h1></th>
+					<th id="t5r0c2"></th>
+					<th id="t5r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b5>
+					<td><button onclick="add(5)" type="button">+</button></td>
+					<td><button onclick="remove(5)" type="button">-</button></td>
+				</tr>
+			</table>
+			<hr>
+			<table id="t6">
+				<tr id="t6r0">
+					<th id="t6r0c1"><h1>ACHIVEMENTS</h1></th>
+					<th id="t6r0c2"></th>
+					<th id="t6r0c3"></th>
+				</tr>
+			</table>
+			<table>
+				<tr id=b6>
+					<td><button onclick="add(6)" type="button">+</button></td>
+					<td><button onclick="remove(6)" type="button">-</button></td>
+				</tr>
+			</table>
+
+			<hr>
+
+			<table>
+				<tr>
+					<th><Label>Social media</Label></th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label>Facebook:</label></td>
+					<td><input type="txt" id="facebook" placeholder="Your Facebook link"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label>Twitter:</label></td>
+					<td><input type="txt" id="twitter" placeholder="Your Twitter link"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label>Instagram:</label></td>
+					<td><input type="txt" id="instagram" placeholder="Your Instagram link"></td>
+				</tr>
+			</table>
+		<form/>
+		<hr>
+		<button type="button" id="generateButton" class="generate" onclick="genHTML()">GENERATE MY CV</button>
+	</div>
+</body>
+</html>
