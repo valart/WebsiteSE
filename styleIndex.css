@@ -1,0 +1,308 @@
+body{
+	padding: 0;
+	margin: 0;
+	
+	background: url(images/background1.jpeg) no-repeat center top / cover; /*Pilt oli võetud siit https://www.pexels.com/photo/two-person-in-formal-attire-doing-shakehands-886465/*/
+	height: 100vh;
+}	
+
+.Container{
+	width: 990px;
+	margin: 0 auto;
+}
+
+
+.MainBlock{
+	padding-top: 50px;
+	text-align: center;
+}
+
+.MainBlock h1{
+	font-size: 60px;
+	color: #06193d;
+	font-family:Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.NamesButton{
+	padding-top: 230px;
+}
+
+.createButton{
+	transition-duration: 0.7s;
+	background: #06193d;
+	color: white;
+	border-radius: 30px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 170px;
+	float:left;
+}
+
+.createButton:hover{
+	transition-duration: 0.7s;
+	background: #082356;
+	color: white;
+	border-radius: 30px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 170px;
+	float:left;
+}
+
+.exampleButton{
+	transition-duration: 0.7s;
+	background: #06193d;
+	color: white;
+	border-radius: 30px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 170px;
+	float:right;
+}
+
+.exampleButton:hover{
+	transition-duration: 0.7s;
+	background: #082356;
+	color: white;
+	border-radius: 30px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 170px;
+	float:right;
+}
+
+
+@media screen and (max-width: 990px) {
+    body{
+		padding: 0;
+		margin: 0;
+		background: url(images/background1.jpeg) no-repeat center top / cover;
+		height: 100vh;
+	}	
+	
+	.Container{
+		width: 720px;
+		margin: 0 auto;
+	}
+	
+	.MainBlock{
+		padding-top: 50px;
+		text-align: center;
+	}
+	
+	.MainBlock h1{
+		font-size: 50px;
+		color: #06193d;
+		font-family:Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+	}
+	
+	.NamesButton{
+		padding-top: 130px;
+	}
+
+	.createButton{
+		transition-duration: 0.7s;
+		background: #06193d;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 250px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left:240px;
+		float:left;
+	}
+	
+	.createButton:hover{
+		transition-duration: 0.7s;
+		background: #082356;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 250px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left:240px;
+		float:left;
+	}
+
+	.exampleButton{
+		transition-duration: 0.7s;
+		background: #06193d;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 250px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		float:left;
+		margin-left: -250px;
+		margin-top: 110px;
+	}
+	
+	.exampleButton:hover{
+		transition-duration: 0.7s;
+		background: #082356;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 250px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		float:left;
+		margin-left: -250px;
+		margin-top: 110px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+    body{
+		padding: 0;
+		margin: 0;
+		background: url(images/background1.jpeg) no-repeat center top / cover;
+		height: 100vh;
+	}	
+	
+	.Container{
+		width: 420px;
+		margin: 0 auto;
+	}
+	
+	.MainBlock{
+		text-align: center;		
+	}
+	
+	.MainBlock h1{
+		font-size: 40px;
+		color: #06193d;
+		font-family:Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+	}
+	
+	.NamesButton{
+		padding-top: 180px;
+	}
+
+	.createButton{
+		transition-duration: 0.7s;
+		background: #06193d;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 220px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left:120px;
+		float:left;
+	}
+	.createButton:hover{
+		transition-duration: 0.7s;
+		background: #082356;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 220px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left:120px;
+		float:left;
+	}
+
+	.exampleButton{
+		transition-duration: 0.7s;
+		background: #06193d;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 220px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		float:left;
+		margin-left: -217px;
+		margin-top: 110px;
+	}
+	
+	.exampleButton:hover{
+		transition-duration: 0.7s;
+		background: #082356;
+		color: white;
+		border-radius: 30px;
+		display: block;
+		width: 220px;
+		padding: 20px 0;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		float:left;
+		margin-left: -217px;
+		margin-top: 110px;
+	}
+}
