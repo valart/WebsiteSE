@@ -151,7 +151,7 @@ function genHTML() {
 	</div>\n\</div>\n\</div> \n\
 	</body>\n\</html> \n\
 	'
-
+	
 	var mywindow = window.open('', 'PRINT', 'height=1000,width=910');
 	mywindow.document.write(code);
 }
@@ -188,6 +188,6 @@ function genPDF() {
 }
 
 function download() {
-	var blob = new Blob([code], {type: "text/plain;charset=utf-8"});
-	saveAs(blob, "YourCV.html");
+	var html = new Blob(["Töötab"], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
+	saveAs(html, "YourCV.html");
 }
