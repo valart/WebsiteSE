@@ -189,18 +189,29 @@ function genPDF() {
 }
 
 function download() {
+
+	var parent = document.getElementById("SB");
+	var child = document.getElementById("downloadPDF");
+	parent.removeChild(child);
+
+	var parent = document.getElementById("SB");
+	var child = document.getElementById("downloadHTML");
+	parent.removeChild(child);
+
 	var y= '<html> \n\
-			<head> \n\
-		<meta charset="utf-8"> \n\
-		<link rel="stylesheet" href="styleCV.css" /> \n\
+	<head> \n\
+	<meta charset="utf-8"> \n\
+	<link rel="stylesheet" href="styleCV.css" /> \n\
 	</head> \n\
 	\n\
 	<body>\n\
 	';
+	
 	var x = document.body.innerHTML;
 	x += '</body>\n\
 	</html>\n\
 	';
+	
 	var html = new Blob([y+x], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
 	saveAs(html, "YourCV.html");
 	
