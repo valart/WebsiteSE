@@ -73,6 +73,7 @@ function remove(tbl) {
 	}
 }
 
+
 function genHTML() {
 	var Name = document.getElementById("Name").value;
 	var Sname = document.getElementById("Sname").value;
@@ -150,7 +151,7 @@ function genHTML() {
 	<button type="button" id="downloadPDF" class="generate" onclick="genPDF()">DOWNLOAD AS PDF</button><button type="button" id="downloadHTML" class="generate" onclick="download()">DOWNLOAD HTML</button> \n\
 	</div>\n\</div>\n\</div> \n\
 	</body>\n\</html> \n\
-	'
+	';
 	
 	var mywindow = window.open('', 'PRINT', 'height=1000,width=910');
 	mywindow.document.write(code);
@@ -188,6 +189,94 @@ function genPDF() {
 }
 
 function download() {
-	var html = new Blob(["Töötab"], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
+	var x = document.body.innerHTML;
+	var html = new Blob([x], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
 	saveAs(html, "YourCV.html");
+	
+	var codeCSS = 'body{\n \
+				padding: 0;\n \
+				margin: 0;\n \
+				background-color: #e6eaf4;\n \
+			}\n \
+			.Container{\n \
+				width: 910px;\n \
+				margin: 0 auto;\n \
+			}\n \
+			.Header a{\n \
+				float: left;\n \
+				padding-top: 30px;\n \
+				padding-left: 50px;\n \
+				font-family: "Lucida Console", Times, serif;\n \
+				font-weight: bold;\n \
+				font-size: 60px;\n \
+			}\n \
+			.Header p{\n \
+				padding-top: 123px;\n \
+				font-size: 20px;\n \
+				padding-left: 60px;\n \
+			}\n \
+			.AvatarImage{\n \
+				float:right;\n \
+				border-radius: 50%;\n \
+				width: 180px;\n \
+				height: 180px;\n \
+			}\n \
+			hr{\n \
+				border: 1px solid black;\n \
+			}\n \
+			.Name{\n \
+				float: left;\n \
+				width: 300px;\n \
+			}\n \
+			.Name a{\n \
+				text-transform: uppercase;\n \
+				font-size: 20px;\n \
+				font-weight: bold;\n \
+			}\n \
+			.Description{\n \
+				float:right;\n \
+				width: 570px;\n \
+			}\n \
+			.DescriptionName{\n \
+				text-align:left;\n \
+				float:left;\n \
+			}\n \
+			.DescriptionNameBold{\n \
+				text-align:left;\n \
+				float:left;\n \
+				font-weight:bold;\n \
+			}\n \
+			.Description a{\n \
+				font-size: 18px;\n \
+			}\n \
+			.DescriptionText{\n \
+				text-align:right;\n \
+				float:right;\n \
+			}\n \
+			.NewBlock1{\n \
+				margin-bottom:-9px;\n \
+			}\n \
+			.SocialButtons{\n \
+				float:right;\n \
+				margin-bottom: 5px;\n \
+			}\n \
+			.instagramImage{\n \
+				width: 30px;\n \
+				height: 30px;\n \
+				float: right;\n \
+			}\n \
+			.facebookImage{\n \
+				width: 30px;\n \
+				height: 30px;\n \
+				float: right;\n \
+				margin-right:7px;\n \
+			}\n \
+			.twitterImage{\n \
+				width: 30px;\n \
+				height: 30px;\n \
+				float: right;\n \
+				margin-right:7px;\n \
+			}';
+			var css = new Blob([codeCSS], {type: "text/plain;charset=utf-8"}); /*Kõik mis on seotud salvestamisega oli võetud siin https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js*/
+			saveAs(css, "styleCV.css");
 }
